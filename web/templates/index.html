@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokamak Data Visualizer</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div id="plot"></div>
+    <div>
+        <label for="signalSelect">Select signals:</label>
+        <select id="signalSelect" multiple>
+            <option value="current">Plasma Current</option>
+            <option value="kappa">Kappa</option>
+            <option value="density">Density</option>
+        </select>
+        <button onclick="updatePlot()">Update Plot</button>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
