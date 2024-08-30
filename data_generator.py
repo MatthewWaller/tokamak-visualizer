@@ -48,9 +48,9 @@ def generate_tokamak_data(start_time=0, end_time=5000, time_step=1):
 data = generate_tokamak_data()
 
 # Save to CSV
-data.to_csv('tokamak_data.csv', index=False)
+data.to_csv('data/tokamak_data.csv', index=False)
 
-print("Data has been saved to 'tokamak_data.csv'")
+print("Data has been saved to 'data/tokamak_data.csv'")
 
 # Optional: Plot the data
 plt.figure(figsize=(12, 8))
