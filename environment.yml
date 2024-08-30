@@ -1,0 +1,12 @@
+name: tokamak-visualizer
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.8
+  - numpy
+  - pandas
+  - matplotlib
+  - pip
+  - pip:
+    - plotly
