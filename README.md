@@ -35,11 +35,13 @@ conda activate tokamak-visualizer
 
 Ensure you have Go installed and your `GOPATH` is set up correctly.
 
-Initialize the Go module:
+Run: 
 
 ```bash
-go mod init tokamak-visualizer
+go mod tidy
 ```
+
+This command will ensure all dependencies are correctly listed in the go.mod file and downloaded.
 
 ## Usage
 
