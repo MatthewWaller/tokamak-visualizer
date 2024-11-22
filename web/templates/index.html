@@ -7,17 +7,17 @@
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
-    <div id="plot"></div>
     <div>
-        <label for="signalSelect">Select signals:</label>
-        <select id="signalSelect" multiple>
-            <option value="current">Plasma Current</option>
-            <option value="kappa">Kappa</option>
+        <label for="signalSelect">Select one or more signals:</label>
+        <select id="signalSelect" multiple onchange="updatePlot()">
+            <option value="current" selected>Plasma Current</option>
+            <option value="kappa"selected>Kappa</option>
             <option value="density">Density</option>
         </select>
-        <button onclick="updatePlot()">Update Plot</button>
+        <input type="checkbox" checked id="normalizeToggle" onchange="updatePlot()">
+        <label for="normalizeToggle">Z-Score Normalize</label>
     </div>
-
+    <div id="plot"></div>
     <script src="/static/js/app.js"></script>
 </body>
 </html>

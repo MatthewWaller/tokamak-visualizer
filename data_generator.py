@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -46,7 +47,8 @@ def generate_tokamak_data(start_time=0, end_time=5000, time_step=1):
 
 # Generate data
 data = generate_tokamak_data()
-
+if os.path.exists('data/') == False:
+    os.mkdir('data')
 # Save to CSV
 data.to_csv('data/tokamak_data.csv', index=False)
 

@@ -43,6 +43,8 @@ go mod tidy
 
 This command will ensure all dependencies are correctly listed in the go.mod file and downloaded.
 
+Ensure you have TypeScript installed with `npm install typescript --save-dev`
+
 ## Usage
 
 ### 1. Generate Tokamak Data
@@ -55,9 +57,14 @@ python data_generator.py
 
 This will create a `tokamak_data.csv` file in the `data/` directory.
 
-### 2. Run the Go Web Server
+### 2. Compile the TypeScript and Run the Go Web Server
 
 From the root of the project, run:
+```bash
+npx tsc
+```
+
+Then run
 
 ```bash
 go run cmd/server/main.go
@@ -80,6 +87,8 @@ tokamak-visualizer/
 │
 ├── web/
 │   ├── static/
+│   |   ├── ts/
+│   │   │   └── app.ts        # TypeScript that generates the JavaScript
 │   │   └── js/
 │   │       └── app.js        # JavaScript for the web interface
 │   └── templates/
